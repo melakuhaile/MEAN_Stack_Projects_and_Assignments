@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quotes</title>
+</head>
+<body>
+  <a href="/">Home</a>
+  <h1>Here are recent Dojo quotes!</h1>
+  <% for (const quote of quotes) { %>
+    <h3>Author: <%= quote.name %></h3>
+    <p>Quote: <%= quote.quote %></p>
+    <p><%= quote.createdAt %></p>
+  <% } %>
+</body>
+</html>
