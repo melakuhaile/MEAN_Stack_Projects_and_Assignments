@@ -1,0 +1,61 @@
+<header>
+	<section class="left">
+		<label for="level"> Enter Power Level multiplier </label>
+		<input type="number" max="100" min="1" [(ngModel)]="power">
+		<!-- <button (click)="calculate()">Calculate Powers</button> -->
+	</section>
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8IqoxcAZw9g4sBgGRXYkITIdCe81-LPdGWN_6oiFmd8vjZuhX" alt="">
+</header>
+<p>
+	<app-human [power]="power" class='level'></app-human>
+	<app-saiyan [power]="power" class='level'></app-saiyan>
+	<app-super-saiyan [power]="power" class='level'></app-super-saiyan>
+	<app-super-saiyan2 [power]="power" class='level'></app-super-saiyan2>
+	<app-super-saiyan3 [power]="power" class='level'></app-super-saiyan3>
+	<app-super-saiyan4 [power]="power" class='level'></app-super-saiyan4>
+</p>
+
+
+<style>
+	header section {
+    padding: 30px;
+    min-height: 150px;
+}
+header section.left {
+    width: 700px;
+    display: inline-block;
+    vertical-align: top;
+}
+header section.left span,
+header section.left button,
+header section.left input {
+    font-size: 2em;
+    font-weight: bold;
+    margin-right: 10px;
+}
+header section.left input {
+    font-size: 1.5em;
+    width: 80px;
+}
+
+img {
+    margin-bottom: 5px;
+    vertical-align: top;
+    display: inline-block;
+    width: 200px;
+}
+p.body{
+    text-align: center;
+}
+.level {
+    background-color: rgb(250, 215, 210);
+    text-align: left;
+    width: 275px;
+    height: 175px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 15px;
+    padding: 5px;
+    vertical-align: top;
+}
+</style>
